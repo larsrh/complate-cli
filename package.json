@@ -1,0 +1,44 @@
+{
+  "name": "complate-cli",
+  "version": "0.0.0",
+  "description": "CLI preprocessor for complate-ast",
+  "main": "dist/index.js",
+  "bin": {
+    "complate-cli": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsc --watch --incremental",
+    "eslint": "eslint src --ext .ts",
+    "build": "rm -rf tsconfig.tsbuildinfo dist && tsc --emitDeclarationOnly && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsrh/complate-cli.git"
+  },
+  "author": "Lars Hupel <lars.hupel@innoq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsrh/complate-cli/issues"
+  },
+  "homepage": "https://github.com/larsrh/complate-cli#readme",
+  "dependencies": {
+    "acorn": "^7.2.0",
+    "acorn-jsx": "^5.2.0",
+    "astring": "^1.4.3",
+    "complate-ast": "https://github.com/larsrh/complate-ast/releases/download/v0.0.9/complate-ast-0.0.9.tgz",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-sucrase": "^3.0.2",
+    "@types/astring": "^1.3.0",
+    "@types/estree": "^0.0.44",
+    "@types/estree-jsx": "^0.0.0",
+    "@types/node": "^14.0.12",
+    "@types/yargs": "^15.0.5",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.2.0",
+    "rollup": "^2.15.0",
+    "rollup-plugin-executable": "^1.6.0"
+  }
+}
